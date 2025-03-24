@@ -445,9 +445,6 @@ main{
 #slider button:last-child {
     right: 100px;
 }
-#slider:hover button {
-    display: block;
-}
 #slider .dots {
     position: absolute;
     bottom: 0;
@@ -1777,6 +1774,9 @@ footer.phone .dropdown.last .links a img {
     }
     #slider img {
         border-radius: 0;
+    }
+    #slider:hover button {
+    display: block;
     }
 
 
