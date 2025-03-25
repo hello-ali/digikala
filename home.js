@@ -92,6 +92,8 @@ city_phone.onclick = () => {
 }
 city_desk.onclick = (e) =>{
     e.stopPropagation()
+    pass("hidden")
+    background.style.zIndex = ''
     div = cityPass
     pass("show")
 }
@@ -209,6 +211,7 @@ let category_pass = document.querySelector('nav.desk .menuCategory-pass')
 
 category.addEventListener('mouseover', (e) => {
     e.stopPropagation();
+    pass("hidden");
     div = category_pass;
     pass("show");
     background.style.zIndex = '99';
