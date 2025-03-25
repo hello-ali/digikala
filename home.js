@@ -313,14 +313,12 @@ let touchStartStatic
 let endloc=0
 let size
 start = (event) => {
-    event.preventDefault();
     touchStart = event.clientX || (event.touches && event.touches[0].clientX);
     touchStartStatic = event.clientX || (event.touches && event.touches[0].clientX);
     mousedown = true;
 }
 
 move = (event) => {
-    event.preventDefault();
     if (mousedown) {
         touchMove = event.clientX || (event.touches && event.touches[0].clientX);
         let added = touchMove - touchStart;
