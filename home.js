@@ -92,7 +92,10 @@ city_phone.onclick = () => {
 }
 city_desk.onclick = (e) =>{
     e.stopPropagation()
-    pass("hidden")
+    if(div == searchPass_desk || category_pass){
+        pass("hidden")
+        background.style.zIndex = ''
+    }
     background.style.zIndex = ''
     div = cityPass
     pass("show")
@@ -211,13 +214,16 @@ let category_pass = document.querySelector('nav.desk .menuCategory-pass')
 
 category.addEventListener('mouseover', (e) => {
     e.stopPropagation();
-    pass("hidden");
+    if(div == searchPass_desk){
+        pass("hidden")
+    }
     div = category_pass;
     pass("show");
     background.style.zIndex = '99';
 })
 category.addEventListener('mouseout', () => {
     pass("hidden")
+    background.style.zIndex = '';
 })
 
 
